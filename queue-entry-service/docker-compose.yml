@@ -1,0 +1,8 @@
+rabbitmq:
+  container_name: rabbitmq
+  image: rabbitmq:management
+  # volumes:
+  #  - ./data/rabbitmq:/var/lib/rabbitmq
+  ports:
+    - "5672:5672"
+    - "15672:15672"
