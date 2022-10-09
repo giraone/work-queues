@@ -1,6 +1,6 @@
 # Working Queues - Queue Entry Service
 
-A REST based service to put working tasks to the queueing system for "*competing consumer pattern*" tests.
+A REST based service to put working tasks to the queueing system for "*competing consumers pattern*" tests.
 
 This solution is using the reactive stack:
 - WebFlux REST services
@@ -28,7 +28,8 @@ The server runs on port `9082`. Actuator health can be accessed with http://loca
 cd src/test/curl
 export BASE_URL="http://localhost:9082"
 ./add-task.sh Fibonacci 5 $RANDOM
-
+# More load
+while true; do ./add-task.sh Fibonacci 35 $RANDOM; done
 ```
 ## AMQP Setup
 
